@@ -1,5 +1,26 @@
+# Introduce
 
-# Linux malloc hook issue
+This project is used to test tinycc lib for run C code as a script.
+
+# Build
+
+```bash
+./build.sh
+```
+
+# Usage
+
+```bash
+cd products
+./bin/tcc_test
+
+output:
+    3 + 5 = 8
+```
+
+# Issues
+
+## Linux malloc hook issue
 
 Modify the tinycc/libbcheck.c file
 
