@@ -10,10 +10,7 @@ if [ ! -d "$FILE" ]; then
     mkdir ${FILE}
 fi
 
+# Build tinycc
 cd ${tinycc_dir} && ./configure --prefix=../tcc && make -j8 && make install
-
-cd ${FILE}
-
-cmake ..
-
-make
+# Build tcc_test
+cd ${FILE} && cmake .. && make
