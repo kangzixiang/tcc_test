@@ -3,10 +3,14 @@
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 FILE=${CURRENT_DIR}/products
 
+tinycc_dir=${CURRENT_DIR}/tinycc
+
 if [ ! -d "$FILE" ]; then
     echo "$FILE not exist"
     mkdir ${FILE}
 fi
+
+cd ${tinycc_dir} && ./configure --prefix=../tcc && make -j8 && make install
 
 cd ${FILE}
 
