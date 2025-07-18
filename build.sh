@@ -11,6 +11,6 @@ if [ ! -d "$FILE" ]; then
 fi
 
 # Build tinycc
-cd ${tinycc_dir} && ./configure --prefix=../tcc && make -j8 && make install
+cd ${tinycc_dir} && ./configure --prefix=$HOME/tcc-host && make -j8 && make install
 # Build tcc_test
-cd ${FILE} && cmake .. && make
+cd ${FILE} && cmake .. && make -j8
